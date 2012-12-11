@@ -13,7 +13,12 @@
 
 <% @attendances.each do |attendance| %>
   <tr>
-    <td><%= attendance.date %></td>
+
+    <td>
+      <a href="#" id="date" data-type="text" data-pk="<%= attendance.id %>" data-url="<%= attendance_path(attendance.id) %>">
+        <%= attendance.date %>
+      </a>
+    </td>
     <td><%= attendance.in %></td>
     <td><%= attendance.out %></td>
     <td><%= attendance.note %></td>
